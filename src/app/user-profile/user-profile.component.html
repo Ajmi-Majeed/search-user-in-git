@@ -1,0 +1,27 @@
+<div class="centerAlignBody">
+    <div class="form-group">
+        <div class="example-form" >
+        <mat-form-field class="example-full-width">
+            <input type="text" class="form-control" matInput placeholder="Enter UserName" (keyup.enter)="search()" [(ngModel)]="username">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="search()">Find in github</button>
+        </div>
+    </div>
+    <mat-spinner *ngIf=loader></mat-spinner>
+    <div *ngIf=data>
+    <mat-card class="card">
+        <mat-card-header color="primary">
+        
+        <mat-card-title>{{data?.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src='{{ data?.avatar_url }}' >
+        <mat-card-content>
+        <p>{{data?.location}}</p>
+        </mat-card-content>
+        </mat-card>    
+    </div> <br>
+    <div *ngIf=error>
+        <mat-card class="noDataBox"><b>NO  DATA  TO  DISPLAY !</b></mat-card>
+    </div>
+    
+</div>

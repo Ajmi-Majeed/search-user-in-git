@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.example-form {
+    min-width: 150px;
+    max-width: 530px;
+    width: 100%;
+    text-align: center;
+} 
+.example-full-width {
+    width: 100%;
+}
+.mat-card{
+      width: 500px;
+}
+.noDataBox{
+    color:  rgb(252, 248, 248);
+    text-align: center;
+    background-color:rgb(252, 26, 26);
+    font-size: 18px;
+}
+.centerAlignBody{
+    margin-left: 400px;
+    margin-top: 50px;  
+}
